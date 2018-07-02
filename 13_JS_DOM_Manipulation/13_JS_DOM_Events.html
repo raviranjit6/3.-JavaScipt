@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Events</title>
+    <style>
+        div{
+            height: 300px;
+        }
+        span{
+            font-size: 18px;
+        }
+        input[type=text], input[type=password]{
+            width: 100%;
+            padding: 10px;
+        }
+        #click_button{
+            margin-left: 400px;
+            padding: 10px 20px;
+        }
+        .text_class{
+            background-color: gray;
+            height: 200px;
+        }
+        #font{
+            margin-left: 450px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form>
+        <label><span>Username:</span> <input type="text" id="uname" name="userName"
+                                             placeholder="Enter User Name">
+        </label><br><br><br><br><br>
+        <label><span>Password:</span> <input type="password" id="pwd" name="passWord"
+                                             placeholder="Enter Password">
+        </label><br><br>
+    </form>
+    <button type="button" id="click_button" onclick="myFunction()">Click</button>
+</div>
+<br><br><br>
+<div>
+    <form>
+        <label>
+            <span>Enter Your Name:</span><input type="text" id="userInput"
+                                                name="userTextName">
+        </label>
+    </form>
+    <div class="text_class">
+        <h2 id="userInputPrint"></h2>
+    </div><br><br>
+    <div>
+        <button type="button" id="some" style="font-style: italic" onclick="fontFun()">Change
+            Font</button>
+    </div>
+</div>
+<script>
+    function myFunction() {
+        var userName = document.querySelector('#uname').value;
+        var passWord = document.querySelector('#pwd').value;
+        if (userName === 'ravi' && passWord === 'ravi'){
+            document.querySelector('#uname').style.borderColor = 'green';
+            document.querySelector('#pwd').style.borderColor = 'green';
+        }
+        else{
+            document.querySelector('#uname').style.borderColor = 'red';
+            document.querySelector('#pwd').style.borderColor = 'red';
+        }
+    }
+    //Event listeners
+    //get the elements
+    var userInput =  document.querySelector('#userInput');
+    //Hookup an element
+    userInput.addEventListener('keyup', display);
+    //logic
+
+    function display() {
+        var userTextName = userInput.value;
+        document.querySelector("#userInputPrint").innerHTML = userTextName;
+        if(userTextName === 'Ravi'){
+            userInput.style.borderColor = 'green';
+        }
+        else{
+            userInput.style.borderColor = 'red';
+        }
+    }
+    function fontFun() {
+        document.getElementById('userInputPrint').style.fontFamily = '\'lobster\', cursive';
+    }
+</script>
+</body>
+</html>

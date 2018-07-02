@@ -1,0 +1,102 @@
+header , footer{
+    background-color: lightgray;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+body{
+    margin: 0;
+    font-family: "Franklin Gothic Book",sans-serif;
+    background-color: lightgray;
+}
+/* main navigation */
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav{
+    background-color: black;
+    overflow: hidden;
+}
+nav ul li{
+    float: left;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 14px 25px;
+    display: inline-block;
+}
+nav ul li a:hover{
+    background-color: #060303;
+}
+/* Sidebar Section */
+aside{
+    float: left;
+    min-width: 200px;
+
+    height: 600px;
+}
+aside ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+aside ul li{
+    padding: 20px;
+}
+aside ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'lobster', cursive;
+
+}
+/* main Section */
+section{
+    margin-left: 200px;
+    border-left: 2px solid #421F02;
+    padding: 10px;
+}
+details{
+    background-color: black;
+    padding: 14px;
+    margin: 5px;
+    color: white;
+}
+article{
+    background-color: #F7B176;
+    color: black;
+    padding: 10px;
+}
+article h2{
+    color: #421F02;
+}
+.button-row td{
+    padding: 5px 10px;
+    margin: 2px;
+}
+button{
+    border: 1px  black;
+    padding: 10px 50px;
+    font-family: 'lobster', cursive;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 20px;
+    outline: none;
+    box-shadow: 15px 15px 15px black;
+}
+.cblue{
+    background-color: blue;
+
+}
+.cgyellow{
+    background-color: greenyellow;
+}
+.cgreen{
+    background-color: green;
+}
+.cred{
+    background-color: red;
+}
